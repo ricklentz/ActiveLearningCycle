@@ -103,3 +103,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 *.pkl
+Active Learning with Rationales.ipynb
+Active Learning with Rationales Private.ipynb
