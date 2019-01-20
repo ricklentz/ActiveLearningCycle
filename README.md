@@ -13,9 +13,11 @@
         `python process_step_1_read_split_save.py`
     - To run pipeline that precalculates data features 
         `python process_step_2_assign_features.py`
-    - To run ML pipeline that trains classifier and saves AUC
-        `python process_step_3_train_score_auc.py`
+    - To run pipeline that trains classifier and saves AUC
+        `python process_step_3_baseline.py`
+    - To train the classifier and save AUC
+        `python process_step_4_train_score_auc.py`
 
-2. Run the following command in the root directory to run Jupyter-Lab for results visualization.
-    `jupyter-lab`
+2. Run the following command in the root directory to run Jupyter Notebook for results visualization.
+    `jupyter-lab visualize_results.ipynb`
 
