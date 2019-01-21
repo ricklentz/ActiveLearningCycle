@@ -6,7 +6,8 @@ from sklearn.metrics import accuracy_score, roc_curve, auc, roc_auc_score
 import numpy as np
 import pandas as pd
 
-SEED = 64
+
+SEED = 0 #64
 
 def find_nearest(array, value):
     """Finds the prediction closest to the boundary"""
@@ -29,8 +30,8 @@ for c in [0.9]:#[0.5,0.2,0.8,0.4,0.6,0.7,0.3,0.9,0.1,0.0,1.0]:
         #episode = 1
 
         # split the dataset
-        X_train_reg, X_test_reg, Y_train_reg, Y_test_reg = train_test_split(X_reg_features, Y, test_size=0.2, random_state=SEED)
-        X_train_high, X_test_high, Y_train_high, Y_test_high = train_test_split(X_high_features, Y, test_size=0.2, random_state=SEED)
+        X_train_reg, X_test_reg, Y_train_reg, Y_test_reg = train_test_split(X_reg_features, Y, test_size=0.2) # random_state=SEED
+        X_train_high, X_test_high, Y_train_high, Y_test_high = train_test_split(X_high_features, Y, test_size=0.2) #random_state=SEED
 
         # used to accumulate training text samples for simulating active learning
         baseline_train_list = list()
@@ -48,9 +49,9 @@ for c in [0.9]:#[0.5,0.2,0.8,0.4,0.6,0.7,0.3,0.9,0.1,0.0,1.0]:
       
         # simulated active learning
         for idx in range(0,len(Y_train_reg)):
-            # Train each model
-            reg_model = LogisticRegression(random_state=SEED).fit( [X_train_reg[i] for i in baseline_train_list],Y_train_reg[baseline_train_list]  )#X_train_reg,Y_train_reg)
-            high_model = LogisticRegression(random_state=SEED).fit([X_train_high[i] for i in highlight_train_list]  ,Y_train_high[highlight_train_list] )
+            # Train each model  LogisticRegression(random_state=SEED)
+            reg_model = LogisticRegression().fit( [X_train_reg[i] for i in baseline_train_list],Y_train_reg[baseline_train_list]  )#X_train_reg,Y_train_reg)
+            high_model = LogisticRegression().fit([X_train_high[i] for i in highlight_train_list]  ,Y_train_high[highlight_train_list] )
             # find AUCs
             n_auc = roc_auc_score(Y_test_reg, reg_model.predict_proba(X_test_reg)[:,1])
             norm_auc.append( n_auc )
