@@ -1,9 +1,6 @@
 # Active Learning with Rationales
 
-  This project aims to answer if rationales aid in active learning.  Labeling uses resources and active learning attempts to add value by reducing the resources needed to construct models. Thus this effort asks three questions:
-  1) Does active learning with rationales reduce the labeling effort against a baseline effort?
-  2) If so, by how much (show AUC)?
-  3) If so, what balance between the rationale and baseline document features (represented by the variable c) optimizes this reduction?
+Please view the detailed discussion in the Jupyter Notebook titled `Active Learning Cycle.ipynb`.
   
 
 ### Instructions:
@@ -18,10 +15,10 @@
     - To train the classifier and save AUC
         `python process_step_4_train_score_auc.py`
 
-2. Run the following command in the root directory to run Jupyter Notebook for results visualization.
-    `jupyter-lab visualize_results.ipynb`
+2. Run the following command in the root directory to run Jupyter Notebook.
+    `jupyter-lab Active Learning Cycle.ipynb`
 
-    You can then use Tensorboard to visualize the different results:
+    You can then use Tensorboard to explore the experiment's results:
     `tensorboard --logdir tensorboard_runs` and browse to http://localhost:6006/
 
 
