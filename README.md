@@ -1,9 +1,9 @@
 # Active Learning with Rationales
 
-  This project aims to answer if rationales aid in active learning.  Labeling uses resources and active learning attempts to add value by reducing the resources needed to construct new models. Thus this effort asks three questions:
-  1) Does active learning with rationales reduce the labeling effort?
+  This project aims to answer if rationales aid in active learning.  Labeling uses resources and active learning attempts to add value by reducing the resources needed to construct models. Thus this effort asks three questions:
+  1) Does active learning with rationales reduce the labeling effort against a baseline effort?
   2) If so, by how much (show AUC)?
-  3) If so, what balance between the rationale and the document (represented by the variable c) optimizes this reduction?
+  3) If so, what balance between the rationale and baseline document features (represented by the variable c) optimizes this reduction?
   
 
 ### Instructions:
@@ -21,3 +21,11 @@
 2. Run the following command in the root directory to run Jupyter Notebook for results visualization.
     `jupyter-lab visualize_results.ipynb`
 
+    You can then use Tensorboard to visualize the different results:
+    `tensorboard --logdir tensorboard_runs` and browse to http://localhost:6006/
+
+
+### Python Dependiences:
+
+The following packages are needed and can be installed using pip:
+pip install pandas, random, numpy, pickle, pymagnitude, sklearn

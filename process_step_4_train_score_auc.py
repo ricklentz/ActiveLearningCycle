@@ -1,5 +1,5 @@
 # open the upstream data
-import pickle, copy
+import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_curve, auc, roc_auc_score

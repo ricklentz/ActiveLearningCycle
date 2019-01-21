@@ -2,8 +2,7 @@
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, roc_curve, auc, roc_auc_score
-import numpy as np
+from sklearn.metrics import roc_curve, auc
 
 # import the feature data and labels
 Y = pickle.load(  open('Y.pkl', "rb" ) )
