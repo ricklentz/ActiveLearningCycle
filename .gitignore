@@ -107,3 +107,4 @@ Active Learning with Rationales.ipynb
 Active Learning with Rationales Private.ipynb
 tensorboard_runs/.DS_Store
 .DS_Store
+*.csv

@@ -1,3 +1,8 @@
+
+Check out this [Medium] post for a CRISP-DM background on this effort.
+
+[Medium]: https://medium.com/@rlentz/active-learning-for-unstructured-data-a-crisp-dm-template-7caf8d6566a4
+
 # Active Learning with Rationales
 
 Please view the detailed discussion in the Jupyter Notebook titled `Active Learning Cycle.ipynb`.
